@@ -1,0 +1,18 @@
+div{
+    height:100px;
+    width:100px;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIJ156_WVxbcjJexB2G_M4F5VeE6tQ0BCaxA&s");
+    background-size:cover ;
+    background-repeat: no-repeat;
+    position:fixed;
+    right:2px;
+    top:50px;
+    border:2px dashed black;
+}
+h5{
+    color:white;
+}
+footer{
+    position:relative;
+    bottom: 1px;
+}
