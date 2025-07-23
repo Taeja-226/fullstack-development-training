@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    /* Base Reset & Global Styling */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #fffaf0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    /* Header & Title */
+    h1 {
+        text-align: center;
+        font-size: 2.75rem;
+        margin: 30px 0 10px;
+        color: #222;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        color: #444;
+    }
+
+    /* Navigation Bar */
+    nav {
+        background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20230630/pngtree-illustrated-3d-search-bar-icon-for-efficient-website-navigation-image_3691825.jpg");
+        background-size: cover;
+        background-position: center;
+        padding: 18px 0;
+        border: 2px solid rgb(252, 178, 178);
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 600;
+        font-size: 1.1rem;
+        padding: 8px 15px;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    nav a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: #ffe0e0;
+    }
+
+    /* Blog Sections */
+    .div1, .div2 {
+        margin: 30px auto;
+        padding: 25px;
+        max-width: 850px;
+        border-radius: 12px;
+        border: 2px solid #555;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        background-clip: padding-box;
+    }
+
+    .div1 {
+        background-color: #e0f5ff;
+        border-color: #a4d3e8;
+    }
+
+    .div2 {
+        background-color: #ffe6ee;
+        border-color: #f6b6c6;
+    }
+
+    /* Footer */
+    footer {
+        margin-top: 50px;
+        padding: 40px 20px;
+        text-align: center;
+        background-color: rgba(250, 207, 214, 0.4);
+        font-size: 1.2rem;
+        color: #444;
+        border-top: 2px solid #fbbcbc;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        nav {
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 1rem;
+        }
+
+        .div1, .div2 {
+            padding: 20px;
+            margin: 20px;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        footer {
+            font-size: 1rem;
+        }
+    }
+</style>
+</head>
+
+<body>
+    <header>
+        <h1>My Blog</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Content</a>
+        </nav>
+    </header>
+    <main>
+        <div class="div1">
+            <!-- First division for our first blog-->
+            <h2>CSS Color</h2>
+            <p>CSS Colors play a crucial role in capturing the user’s attention and enhancing the overall user
+                experience. One of the key elements that contribute to the visual appeal of a website is the creative
+                use of colors. Cascading Style Sheets (CSS) provides a powerful toolset for styling web pages, and
+                understanding the nuances of CSS colors opens up a world of possibilities for designers and developers.
+            </p>
+        </div>
+        <!-- Second contetn for our second blog-->
+        <div class="div2">
+            <h2>Hexadecimal</h2>
+            <p> Hexadecimal Notation:
+                CSS allows developers to define colors using various notations, and one of the most widely used is
+                hexadecimal notation. Hex codes consist of six characters, ranging from 0 to 9 and A to F, representing
+                the RGB (Red, Green, Blue) values. For example, #FF5733 represents a shade of orange.</p>
+        </div>
+    </main>
+    <hr>
+    <footer>2025 My Simple Blog</footer>
+</body>
+
+</html>
