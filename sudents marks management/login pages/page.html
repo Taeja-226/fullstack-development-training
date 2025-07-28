@@ -1,32 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-
 <body>
-    <header class="font-bold bg-black text-white">
-        <h3>Sign In</h3>
+    <header class="font-bold">
+        <h3>Sign in</h3>
     </header>
-    <main class=" p-4">
+    <main>
         <form>
             <ul class="flex flex-col">
-                <label< /label>
-                    <li class=" border-2 mb-3 rounded border-gray-300 "><input type="text" placeholder="username"></li>
-                    <li class="border-2 rounded  border-gray-300"><input type="text" placeholder="password"></li>
+                <li class="border-2 border-gray-250 p-1.5 m-2">
+                    <input type="text" placeholder="Username" class="w-full">
+                </li>
+                <li class="border-2 border-gray-250 p-1.5 m-2">
+                   <input type="password" placeholder="Password" class="w-full">
+                </li>
+            </ul>
+            <ul>
+                <li class="m-2">
+                  <input type="checkbox">
+                  Remember me
+                </li>
+                <li>
+                  <button type="Submit" class="bg-blue-500 border-2 text-white rounded p-1 m-2">Login</button>
+                </li>
             </ul>
         </form>
-        <div>
-            <ul>
-                <li><input type="checkbox" class="mt-3">Remember me</li>
-                <li><button class="border-2 bg-blue-500 text-white px-2 mt-2">Login</button></li>
-            </ul>
-        </div>
     </main>
+    <br>
+    <hr>
+    <footer>
+        <p>Don't have an account? <a href="#" class="text-blue-500">Sign Up Here!</a></p>
+    </footer>
 </body>
-
 </html>

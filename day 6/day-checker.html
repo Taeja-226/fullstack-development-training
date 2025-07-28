@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+     <script>
+        // internal javascript
+        function handleInput() {
+            // here we take input from age input field by id
+            let week = document.getElementById("week").value;
+
+            // here find the age category based on the age input 
+            let day = " ";
+            if (week=="1") {
+               day="Monday";
+            } else if (week=="2") {
+               day="Tuesday";
+            } else if (week=="3") {
+               day="Wednesday";
+            } else if (week=="4"){
+              day="Thursday";
+            }
+            else if (week=="5"){
+              day="Friday";
+            }
+            else if (week=="6"){
+              day="Saturday";
+            }
+            else if (week=="7"){
+              day="Sunday";
+            }
+            else{
+                day="Invalid day"
+            }
+
+            // here we set the result in the p tag with id result
+            document.getElementById("result").innerText = day;
+        }
+    </script>
+    <style>
+        header{
+            color:blue;
+            text-align: center;
+        }
+        button{
+            color:white;
+            border:2px solid gray;
+            border-radius:5%;
+            background-color:rgb(173, 137, 227);
+        }
+        label{
+            margin-left: 80px;
+        }
+        p{
+            border:2px solid gainsboro;
+            height:20px;
+            width:100px;
+            margin-left:auto;
+            margin-right: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Find the Day of the Week</h1>
+    </header>
+    <main>
+        <form>
+            <label>Enter day number(1-7):</label>
+            <input type="number" id="week">
+            <button type="button" onclick="handleInput()">Check</button>
+             <p id="result"></p>
+        </form>
+    </main>
+</body>
+</html>

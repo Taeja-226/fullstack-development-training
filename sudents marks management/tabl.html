@@ -7,20 +7,83 @@
      <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-   <header class="flex bg-gray-600 pl-2 text-white">
+   <header class="flex bg-gray-600 p-2 text-white">
     <h2>Book Review</h2>
     <p class="ml-auto">dheeraj</p>
    </header>
-   <div class="flex ml-auto bg-purple-200">
-        <a href='#' class="pr-8">Home</a>
-        <a href='#' class="pr-8">Courses</a>
-        <a href='#' class="pr-8">Services</a>
-        <button class="border-2 rounded bg-blue-200 border-blue-400 ml-auto">Sign in</button>
-        <button class="border-2 rounded bg-blue-200 border-blue-400 ml-auto">Login</button>
+   <div class="bg-blue-400 text-white text-0.5xl">
+        <a href='#' class="pl-8">Home ></a>
+        <a href='#' >login.html ></a>
+        <a href='#' > book.html</a>
    </div>
-   <div class="flex">
-    <p></p>
-   </div>
+  <div class="flex flex-col bg-gray-200 border-2 border-gray-300 m-3 h-20 rounded">
+     <p>Msg-Select book by click on isbn no or search to give review</p>
+      <a href="#" class="text-blue-500 ml-auto mr-20">view review <button class="border-blue-300 border-2 rounded bg-blue-400 text-white p-1 " > Logout</button></a>
+
+  </div>
+  <form>
+     <label class="m-2">Search book here:</label>
+     <input type="search" class="border-2 border-gray-200 " placeholder="Enter any book title, author">
+     <button class="border-2 border-gray-300 bg-gray-200 m-0 p-0">Search</button>
+  </form>
+  <table class=" m-5 border-spacing-x-2 border-collapse table-auto w-full
+                  border border-slate-500">
+     <tr>
+          <th>isbn</th>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Year</th>
+     </tr>
+     <tr>
+          <td class="text-blue-500">002345x4</td>
+          <td>Atomic Habit</td>
+          <td>James Clear</td>
+          <td>2014</td>
+     </tr>
+     <tr>
+          <td class="text-blue-500">002345x4</td>
+          <td>A Civil Action</td>
+          <td>Jonathan Harr</td>
+          <td>1995</td>
+     </tr>
+     <tr>
+          <td class="text-blue-500">002345x4</td>
+          <td>Skin</td>
+          <td>Ted Dekker</td>
+          <td>2006</td>
+     </tr>
+     <tr>
+          <td class="text-blue-500">002345x4</td>
+          <td>Skeleton Crew</td>
+          <td>Stephen King</td>
+          <td>1985</td>
+     </tr>
+     <tr>
+          <td class="text-blue-500">002345x4</td>
+          <td>Frog Music</td>
+          <td>Emma Donoghue</td>
+          <td>2014</td>
+     </tr>
+     <tr>
+          <td class="text-blue-500">002345x4</td>
+          <td>On The Beach</td>
+          <td>Nevil shute</td>
+          <td>1957</td>
+     </tr>
+     <tr>
+          <td class="text-blue-500">002345x4</td>
+          <td>Magician</td>
+          <td>Raymond E. Fiest</td>
+          <td>1982</td>
+     </tr>
+     <tr>
+          <td class="text-blue-500">002345x4</td>
+          <td>Her Daughter's dream</td>
+          <td>Francine River</td>
+          <td>2010</td>
+     </tr>
+  </table>
+
 
 
 </body>
