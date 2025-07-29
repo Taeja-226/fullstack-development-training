@@ -1,90 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
      <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-   <header class="flex bg-gray-600 p-2 text-white">
-    <h2>Book Review</h2>
-    <p class="ml-auto">dheeraj</p>
-   </header>
-   <div class="bg-blue-400 text-white text-0.5xl">
-        <a href='#' class="pl-8">Home ></a>
-        <a href='#' >login.html ></a>
-        <a href='#' > book.html</a>
-   </div>
-  <div class="flex flex-col bg-gray-200 border-2 border-gray-300 m-3 h-20 rounded">
-     <p>Msg-Select book by click on isbn no or search to give review</p>
-      <a href="#" class="text-blue-500 ml-auto mr-20">view review <button class="border-blue-300 border-2 rounded bg-blue-400 text-white p-1 " > Logout</button></a>
 
-  </div>
-  <form>
-     <label class="m-2">Search book here:</label>
-     <input type="search" class="border-2 border-gray-200 " placeholder="Enter any book title, author">
-     <button class="border-2 border-gray-300 bg-gray-200 m-0 p-0">Search</button>
-  </form>
-  <table class=" m-5 border-spacing-x-2 border-collapse table-auto w-full
-                  border border-slate-500">
-     <tr>
-          <th>isbn</th>
-          <th>Title</th>
-          <th>Author</th>
-          <th>Year</th>
-     </tr>
-     <tr>
-          <td class="text-blue-500">002345x4</td>
-          <td>Atomic Habit</td>
-          <td>James Clear</td>
-          <td>2014</td>
-     </tr>
-     <tr>
-          <td class="text-blue-500">002345x4</td>
-          <td>A Civil Action</td>
-          <td>Jonathan Harr</td>
-          <td>1995</td>
-     </tr>
-     <tr>
-          <td class="text-blue-500">002345x4</td>
-          <td>Skin</td>
-          <td>Ted Dekker</td>
-          <td>2006</td>
-     </tr>
-     <tr>
-          <td class="text-blue-500">002345x4</td>
-          <td>Skeleton Crew</td>
-          <td>Stephen King</td>
-          <td>1985</td>
-     </tr>
-     <tr>
-          <td class="text-blue-500">002345x4</td>
-          <td>Frog Music</td>
-          <td>Emma Donoghue</td>
-          <td>2014</td>
-     </tr>
-     <tr>
-          <td class="text-blue-500">002345x4</td>
-          <td>On The Beach</td>
-          <td>Nevil shute</td>
-          <td>1957</td>
-     </tr>
-     <tr>
-          <td class="text-blue-500">002345x4</td>
-          <td>Magician</td>
-          <td>Raymond E. Fiest</td>
-          <td>1982</td>
-     </tr>
-     <tr>
-          <td class="text-blue-500">002345x4</td>
-          <td>Her Daughter's dream</td>
-          <td>Francine River</td>
-          <td>2010</td>
-     </tr>
-  </table>
+<body>
+     <header class="flex bg-gray-600 p-2 text-white">
+          <h2>Book Review</h2>
+          <p class="ml-auto">dheeraj</p>
+     </header>
+       <nav class="bg-blue-400 text-white text-sm flex items-center pl-8 space-x-2">
+               <a href="#">Home</a><span>&gt;</span>
+               <a href="#">Login</a><span>&gt;</span>
+               <a href="#">Book</a>
+          </nav>
+     <div class="flex flex-col bg-gray-200 border-2 border-gray-300 m-3 h-20 rounded">
+          <p class="mt-auto pl-4">Msg-Select book by click on isbn no or search to give review</p>
+          <a href="#" class="text-blue-500 ml-auto mr-20">view review</a>
+         <button type="button" class="bg-blue-500 text-white w-14 ml-auto mr-5">Search</button>
+
+     </div>
+     <form>
+          <label class="m-2">Search book here:</label>
+          <input type="search" class="border-2 border-gray-200 " placeholder="Enter any book title, author">
+          <button class="border-2 border-gray-300 bg-gray-200">Search</button>
+     </form>
+     <table class=" m-5 border-spacing-x-2 border-collapse table-auto w-full
+                  border border-black-500">
+          <tr>
+               <th>isbn</th>
+               <th>Title</th>
+               <th>Author</th>
+               <th>Year</th>
+          </tr>
+          <tr>
+               <td class="text-blue-500">002345x4</td>
+               <td>Atomic Habit</td>
+               <td>James Clear</td>
+               <td>2014</td>
+          </tr>
+          <tr>
+               <td class="text-blue-500">002395x4</td>
+               <td>A Civil Action</td>
+               <td>Jonathan Harr</td>
+               <td>1995</td>
+          </tr>
+          <tr>
+               <td class="text-blue-500">002745x4</td>
+               <td>Skin</td>
+               <td>Ted Dekker</td>
+               <td>2006</td>
+          </tr>
+          <tr>
+               <td class="text-blue-500">102345x4</td>
+               <td>Skeleton Crew</td>
+               <td>Stephen King</td>
+               <td>1985</td>
+          </tr>
+          <tr>
+               <td class="text-blue-500">052345x4</td>
+               <td>Frog Music</td>
+               <td>Emma Donoghue</td>
+               <td>2014</td>
+          </tr>
+          <tr>
+               <td class="text-blue-500">003345x4</td>
+               <td>On The Beach</td>
+               <td>Nevil shute</td>
+               <td>1957</td>
+          </tr>
+          <tr>
+               <td class="text-blue-500">092345x4</td>
+               <td>Magician</td>
+               <td>Raymond E. Fiest</td>
+               <td>1982</td>
+          </tr>
+          <tr>
+               <td class="text-blue-500">122345x4</td>
+               <td>Her Daughter's dream</td>
+               <td>Francine River</td>
+               <td>2010</td>
+          </tr>
+     </table>
 
 
 
 </body>
+
 </html>

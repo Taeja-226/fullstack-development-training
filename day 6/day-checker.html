@@ -40,18 +40,36 @@
         }
     </script>
     <style>
-        header{
-            color:blue;
+        body{
+            background-color: rgb(241, 239, 239);
+        }
+        main{
+            border: 2px solid gray;
+            height:250px;
+            width:400px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 150px;
+            border-radius:6px;
+            background-color:rgb(249, 218, 249);
+        }
+        h1{
+            color:rgb(226, 104, 104);
             text-align: center;
         }
         button{
+            margin-left: 170px;
+            margin-right: auto;
             color:white;
-            border:2px solid gray;
-            border-radius:5%;
-            background-color:rgb(173, 137, 227);
+            border:2px solid rgba(25, 25, 251,1);
+            padding:2;
+            height:25px;
+            width:60px;
+            background-color:rgba(25, 25, 251,0.7);
         }
         label{
-            margin-left: 80px;
+            margin-left: 110px;
+            font-size: large;
         }
         p{
             border:2px solid gainsboro;
@@ -59,18 +77,22 @@
             width:100px;
             margin-left:auto;
             margin-right: auto;
+            color:rgb(198, 73, 198);
             text-align: center;
+            background-color: rgb(252, 230, 233);
+        }
+        #week{
+           
+            width:40px
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Find the Day of the Week</h1>
-    </header>
     <main>
+        <h1>Find the Day of <br> the Week</h1>
         <form>
             <label>Enter day number(1-7):</label>
-            <input type="number" id="week">
+            <input type="number" id="week"><br><br>
             <button type="button" onclick="handleInput()">Check</button>
              <p id="result"></p>
         </form>
