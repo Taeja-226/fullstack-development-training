@@ -1,7 +1,7 @@
 import { VariableInJsx } from "./Variable.jsx";
 import {ConditionInJsx} from "./ConditionInJsx.js";
 import { FunctionInJsx } from "./FunctionInJsx.js";
-
+import {ListRender} from "./ListRender.js";
 function MyApp() {
     return (
         <div>
@@ -10,6 +10,7 @@ function MyApp() {
        <VariableInJsx />
        <ConditionInJsx />
        <FunctionInJsx />
+       <ListRender/>
    
         </div>
     )
