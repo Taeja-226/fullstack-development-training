@@ -14,8 +14,8 @@ function Header(){
       <Link to="/Show">
            <a href="#" class="text-gray-700 hover:text-blue-600 font-medium transition">Show</a>
       </Link>
-     <Link to="/Completed">
-          <a href="#" class="text-gray-700 hover:text-blue-600 font-medium transition p-2">Completed</a>
+     <Link to="/Done">
+          <a href="#" class="text-gray-700 hover:text-blue-600 font-medium transition p-2">Done</a>
      </Link>
       
     </div>

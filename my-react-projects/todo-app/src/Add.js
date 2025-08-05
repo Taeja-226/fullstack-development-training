@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Add({ addTask }) {
+function Add() {
   let [formData, setFormData] = useState({
     todoTitle: "",
     dueDate: "",
@@ -17,7 +17,6 @@ function Add({ addTask }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    addTask(formData); // send data to App
     alert(`Added: ${formData.todoTitle}`);
     setFormData({ todoTitle: "", dueDate: "", todoStatus: "" }); // clear form
   }
