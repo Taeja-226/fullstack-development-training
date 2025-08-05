@@ -8,7 +8,6 @@ function Header(){
 
  
     <div class="space-x-6">
-      <h1 class= "text-gray-600 text-center" >This is my Home page</h1>
       <Link to="/Add">
           <a href="#" class="text-gray-700 hover:text-blue-600 font-medium transition">Add</a>
       </Link>

@@ -1,14 +1,14 @@
 import { useState } from "react";
 
-function Add() {
-  const [formData, setFormData] = useState({
+function Add({ addTask }) {
+  let [formData, setFormData] = useState({
     todoTitle: "",
     dueDate: "",
     todoStatus: ""
   });
 
   function handleChange(e) {
-    const { name, value } = e.target;
+    let { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
@@ -17,7 +17,9 @@ function Add() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    alert(`Added. Your Task title is ${formData.todoTitle} , due date is ${formData.dueDate} and status is ${formData.todoStatus}`);
+    addTask(formData); // send data to App
+    alert(`Added: ${formData.todoTitle}`);
+    setFormData({ todoTitle: "", dueDate: "", todoStatus: "" }); // clear form
   }
 
   return (
@@ -31,40 +33,40 @@ function Add() {
             type="text"
             name="todoTitle"
             value={formData.todoTitle}
-            onChange={handleChange}
-            className="w-full px-4 py-2 border border-gray-300 text-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            onChange={(e) => handleChange(e)}
+            className="w-full px-4 py-2 border border-gray-300 text-gray-600 rounded-md"
             required
           />
         </div>
 
         <div>
-          <label className=" font-medium mb-1 text-black">Due Date:</label>
+          <label className="font-medium mb-1 text-black">Due Date:</label>
           <input
             type="date"
             name="dueDate"
             value={formData.dueDate}
-            onChange={handleChange}
-            className="w-full px-4 py-2 border border-gray-300  text-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            onChange={(e) => handleChange(e)}
+            className="w-full px-4 py-2 border border-gray-300 text-gray-600 rounded-md"
             required
           />
         </div>
 
         <div>
-          <label className=" font-medium mb-1 text-black">Status:</label>
+          <label className="font-medium mb-1 text-black">Status:</label>
           <input
             type="text"
             name="todoStatus"
             value={formData.todoStatus}
-            onChange={handleChange}
-            className="w-full px-4 py-2 border border-gray-300 text-gray-600  rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="e.g., Pending, Completed"
-            required
+            onChange={(e) => handleChange(e)}
+            className="w-full px-4 py-2 border border-gray-300 text-gray-600 rounded-md"
+            placeholder="e.g., Pending"
+         
           />
         </div>
 
         <button
           type="submit"
-          className="w-full bg-blue-600 hover:bg-blue-700 font-semibold py-2 px-4 rounded-md transition duration-200"
+          className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md"
         >
           Submit
         </button>
