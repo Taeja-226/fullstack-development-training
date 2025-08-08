@@ -1,6 +1,6 @@
 
 import {Link} from "react-router-dom"
-function Header() {
+function Header1() {
     return (
         <header class="bg-gray-300 shadow">
             <nav class="flex items-center justify-between ">
@@ -29,4 +29,4 @@ function Header() {
 
     )
 };
-export { Header }
+export { Header1 }
