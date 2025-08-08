@@ -2,15 +2,27 @@ function Show(props) {
   let todoArr = props.todo;
 
   function handleClick(e, todoId) {
-    todoArr = todoArr.filter(todo => todo.id !== todoId);
-    props.setTodo(todoArr);
-    alert('To-Do task completed');
+    let newTodoArr =[]
+    for (let i=0; i<todoArr.length; i++){
+      newTodoArr[i] = todoArr[i]
+      if (todoArr[i].id == todoId){
+        newTodoArr[i].status = 'completed';
+        newTodoArr[i].completedDate = new Date()
+      }
+    }
+    props.setTodo(newTodoArr)
+    
+    // todoArr = todoArr.filter(todo => todo.id !== todoId);
+    // props.setTodo(todoArr);
+    // alert('To-Do task completed');
   }
-
+  const pendingTodos = todoArr.filter(todo => todo.todoStatus !== 'completed')
   return (
     <div className="max-w-4xl mx-auto mt-10 p-6 bg-white rounded-lg shadow-md">
       <h2 className="text-2xl font-semibold mb-6 text-center text-gray-800">Todo List</h2>
-
+       {pendingTodos.length === 0 ? (
+        <p className="text-center text-purple-500">🎉 No task assigned yet!</p>
+      ) : (
       <table className="min-w-full text-gray-700 table-auto border border-gray-300 rounded-md overflow-hidden">
         <thead>
           <tr className="bg-gray-200 text-left">
@@ -39,6 +51,7 @@ function Show(props) {
           ))}
         </tbody>
       </table>
+      )}
     </div>
   );
 }

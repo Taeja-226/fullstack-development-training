@@ -1,6 +1,8 @@
 import { useState } from "react";
 
-function Add() {
+function Add(props) {
+  
+  let setTodo = props.setTodo;
   let [formData, setFormData] = useState({
     todoTitle: "",
     dueDate: "",
@@ -19,6 +21,17 @@ function Add() {
     e.preventDefault();
     alert("Added Task " + JSON.stringify(formData));
     setFormData({ todoTitle: "", dueDate: "", todoStatus: "" }); // clear form
+    setTodo(prev =>([
+              ...prev , {
+        "id":Date.now(),
+        "todoTitle":formData.todoTitle,
+        "dueDate": formData.dueDate,
+        "todoStatus": formData.todoStatus
+      }
+    ]
+     
+    ))
+
   
     }
   return (

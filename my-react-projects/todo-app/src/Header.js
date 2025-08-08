@@ -3,8 +3,9 @@ function Header(){
     return(
     <header class="bg-gray-300 shadow">
   <nav class="flex items-center justify-between ">
-  
+    <Link to="/">
     <h2 class="text-2xl font-bold text-gray-800 p-2">My To-Do App</h2>
+    </Link>
 
  
     <div class="space-x-6">
