@@ -76,11 +76,11 @@ function CreateAccount() {
             className="mt-1 w-full border border-gray-300 rounded-md px-3 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             <option value="">Select a branch</option>
-            <option value="Canara">Canara</option>
-            <option value="ICICI">ICICI</option>
-            <option value="UCO">UCO</option>
-            <option value="Union">Union</option>
-            <option value="Ujjain">Ujjain</option>
+            <option value="Dehra">Dehra</option>
+            <option value="Samalka">Samalkha</option>
+            <option value="Panipat">Panipat</option>
+            <option value="Sonipat">Sonipat</option>
+            <option value="Rohtak">Rohtak</option>
           </select>
         </div>
 

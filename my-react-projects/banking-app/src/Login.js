@@ -1,3 +1,4 @@
+import {Link} from "react-router-dom"
 function Login() {
   return (
     <div className="max-w-md mx-auto mt-10 bg-white shadow-md rounded-md p-6 border border-gray-200">
@@ -31,12 +32,14 @@ function Login() {
 
         {/* Submit Button */}
         <div>
-          <button
-            type="submit"
-            className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition"
-          >
-            Login
-          </button>
+        <Link to="/bankDetail" >
+  <button
+    type="button"
+    className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition"
+  >
+    Login
+  </button>
+</Link>
         </div>
       </form>
     </div>

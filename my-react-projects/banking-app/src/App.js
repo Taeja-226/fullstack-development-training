@@ -4,28 +4,34 @@ import {Footer} from './Footer'
 import {HomePage} from './HomePage'
 import {CreateAccount} from './CreateAccount'
 import {Login} from './Login'
+import {BankDetail} from './BankDetails'
+import {Transfer} from './Transfer'
+import {TransactionPage} from './TransactionPage'
+import {LogoutPage} from './LogoutPage'
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 function App() {
   return (
-    <div >
-      <BrowserRouter>
-         <Header1/>
-         
-         <Header2/>
-      <Routes>
-        
-        <Route path="/" element={<HomePage/>}/>
-        <Route path="/Account" element={<CreateAccount/>} />
-        <Route path="/Login" element={<Login/>}/>
-        <Route path="/bankDetail" element={<bankDetail/>}/>
-        <Route path="/transfer" element={<transfer/>}/>
-        <Route path="/transaction" element={<transaction/>}/>
-        <Route path="/logout" element={<logout/>}/>
-        </Routes>
-          <Footer/>
-        </BrowserRouter>
+   <div className="flex flex-col min-h-screen">
+  <BrowserRouter>
+    <Header1 />
+    <Header2 />
 
-    </div>
+    <main className="flex-1">
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/Account" element={<CreateAccount />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/bankDetail" element={<BankDetail />} />
+        <Route path="/transfer" element={<Transfer />} />
+        <Route path="/transaction" element={<TransactionPage />} />
+        <Route path="/logout" element={<LogoutPage />} />
+      </Routes>
+    </main>
+
+    <Footer />
+  </BrowserRouter>
+</div>
+
   );
 }
 
