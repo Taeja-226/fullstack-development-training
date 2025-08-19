@@ -1,22 +1,28 @@
-import { callGetALLAPI, callUpdateAPI } from './BackendAPI';
-
-
 function Show(props) {
   let todoArr = props.todo;
-  console.log(JSON.stringify(todoArr))
 
-  async function handleClick(e, todoId) {
-    await callUpdateAPI(
-      '/update-todo',
-      { status: 'completed', completionDate: new Date() },
-      { 'todoId': todoId })
-    let todoList = await callGetALLAPI('/read-all-todo');
-    props.setTodo(todoList);
+  function handleClick(e, todoId) {
+    let newTodoArr =[]
+    for (let i=0; i<todoArr.length; i++){
+      newTodoArr[i] = todoArr[i]
+      if (todoArr[i].id == todoId){
+        newTodoArr[i].status = 'completed';
+        newTodoArr[i].completedDate = new Date()
+      }
+    }
+    props.setTodo(newTodoArr)
+    
+    // todoArr = todoArr.filter(todo => todo.id !== todoId);
+    // props.setTodo(todoArr);
+    // alert('To-Do task completed');
   }
-
+  const pendingTodos = todoArr.filter(todo => todo.todoStatus !== 'completed')
   return (
     <div className="max-w-4xl mx-auto mt-10 p-6 bg-white rounded-lg shadow-md">
       <h2 className="text-2xl font-semibold mb-6 text-center text-gray-800">Todo List</h2>
+       {pendingTodos.length === 0 ? (
+        <p className="text-center text-purple-500">🎉 No task assigned yet!</p>
+      ) : (
       <table className="min-w-full text-gray-700 table-auto border border-gray-300 rounded-md overflow-hidden">
         <thead>
           <tr className="bg-gray-200 text-left">
@@ -27,13 +33,12 @@ function Show(props) {
         </thead>
         <tbody>
           {todoArr.map((value, index) => (
-            value.status==='pending' && (
-            <tr key={value.todoId} className="hover:bg-gray-100 transition-colors">
+            <tr key={value.id} className="hover:bg-gray-100 transition-colors">
               <td className="px-6 py-4 border-b">{value.todoTitle}</td>
               <td className="px-6 py-4 border-b">{value.dueDate}</td>
               <td className="px-6 py-4 border-b text-center">
                 <button
-                  onClick={(e) => handleClick(e, value.todoId)}
+                  onClick={(e) => handleClick(e, value.id)}
                   className="inline-flex items-center gap-2 px-3 py-1"
                 >
                   <input
@@ -43,10 +48,10 @@ function Show(props) {
                 </button>
               </td>
             </tr>
-            )
           ))}
         </tbody>
       </table>
+      )}
     </div>
   );
 }

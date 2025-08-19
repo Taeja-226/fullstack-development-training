@@ -1,17 +1,12 @@
 import { useState } from "react";
-import { callCreateAPI } from "./BackendAPI.js";
-import {callGetALLAPI} from './BackendAPI.js';
-
-
-
 
 function Add(props) {
-
+  
   let setTodo = props.setTodo;
   let [formData, setFormData] = useState({
     todoTitle: "",
     dueDate: "",
-    status: "pending"
+    todoStatus: ""
   });
 
   function handleChange(e) {
@@ -22,25 +17,23 @@ function Add(props) {
     }));
   }
 
-  async function handleSubmit(e) {
+  function handleSubmit(e) {
     e.preventDefault();
     alert("Added Task " + JSON.stringify(formData));
-    let newTodo = {
-      todoId: Date.now().toString(),
-      todoTitle: formData.todoTitle,
-      dueDate: formData.dueDate,
-      status: 'pending'
+    setFormData({ todoTitle: "", dueDate: "", todoStatus: "" }); // clear form
+    setTodo(prev =>([
+              ...prev , {
+        "id":Date.now(),
+        "todoTitle":formData.todoTitle,
+        "dueDate": formData.dueDate,
+        "todoStatus": formData.todoStatus
+      }
+    ]
+     
+    ))
+
+  
     }
-    await callCreateAPI('/create-todo', newTodo);
-     setFormData({ todoTitle: "", dueDate: "", todoStatus: "" });
-
-    //  get our todo again and set todo with setTodo
-      const todoList = await callGetALLAPI('/read-all-todo')
-      setTodo(todoList);
-
-  }
-
-
   return (
     <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow-md">
       <h2 className="text-2xl font-semibold mb-6 text-center text-black">Add Todo</h2>
@@ -74,12 +67,12 @@ function Add(props) {
           <label className="font-medium mb-1 text-black">Status:</label>
           <input
             type="text"
-            name="status"
-            value={formData.status}
+            name="todoStatus"
+            value={formData.todoStatus}
             onChange={(e) => handleChange(e)}
             className="w-full px-4 py-2 border border-gray-300 text-gray-600 rounded-md"
             placeholder="e.g., Pending"
-
+         
           />
         </div>
 
