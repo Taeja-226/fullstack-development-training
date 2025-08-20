@@ -70,7 +70,7 @@ app.get('/read-single-todo', async (req, res) => {
         let result = await db.collection('todo').findOne({ 'todoId': TodoId })
         if (result == null) {
             res.status(404).json({ msg: 'Todo not found' })
-        } else
+        } 
         res.status(200).json(result);
     } catch (error) {
         res.status(500).json({
@@ -90,7 +90,7 @@ app.patch('/update-todo', async (req, res) => {
         if (result.matchedCount === 0) {
             return res.status(404).json({ msg: 'Todo not found' });
         }
-        else 
+        
         res.status(201).json({ msg: 'Todo updated successfully' });
 
     } catch (error) {
@@ -113,7 +113,7 @@ app.delete('/delete-todo', async (req, res) => {
         if (result.deletedCount === 0) {
             res.status(404).json({ msg: 'Task not found' })
         }
-        else
+        
         res.status(201).json({ msg: 'Task deleted successfully' })
     } catch (error) {
         res.status(500).json({
@@ -122,5 +122,3 @@ app.delete('/delete-todo', async (req, res) => {
         })
     }
 })
-
-
